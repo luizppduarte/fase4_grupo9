@@ -1,0 +1,9 @@
+id,nome,consumo_energetico,prioridade_nivel,prioridade_rotulo,capacidade_armazenamento,necessidade_comunicacao,status
+0,Habitação,120.0,5,Crítica,50.0,Alta,Ativo
+1,Centro de Controle,200.0,5,Crítica,80.0,Alta,Ativo
+2,Armazenamento de Energia,30.0,4,Alta,5000.0,Média,Ativo
+3,Agricultura,150.0,4,Alta,100.0,Média,Ativo
+4,Laboratório Científico,180.0,3,Média,60.0,Média,Ativo
+5,Comunicação,90.0,5,Crítica,40.0,Alta,Ativo
+6,Suporte Médico,100.0,4,Alta,70.0,Alta,Ativo
+7,Produção de Oxigênio,160.0,5,Crítica,90.0,Alta,Ativo
