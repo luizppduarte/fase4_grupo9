@@ -3,8 +3,11 @@
 ## Integrantes
 
 Julia Guimarães - RM572241
+
 Samirah Pinotti Deranian - RM573375
+
 Luiz Pedro Pereira Duarte – RM568970
+
 Isaac Aurélio de Freitas Castro - RM571175
 
 Curso: Ciência da Computação
