@@ -1,81 +1,377 @@
-#  SIGIC - Sistema Inteligente de Gerenciamento da Infraestrutura da Colônia
+# SIGIC – Sistema Inteligente de Gerenciamento da Infraestrutura da Colônia
 
-## Sobre o Projeto
+## Integrantes
 
-O **SIGIC** (Sistema Inteligente de Gerenciamento da Infraestrutura da Colônia) é uma aplicação Python desenvolvida para modelar, gerenciar e otimizar a infraestrutura da colônia marciana **Aurora Siger**.
+Julia Guimarães - RM572241
+Samirah Pinotti Deranian - RM573375
+Luiz Pedro Pereira Duarte – RM568970
+Isaac Aurélio de Freitas Castro - RM571175
 
-O sistema representa a colônia como uma rede interconectada (grafo) de módulos essenciais, utilizando estruturas de dados, algoritmos de busca e caminhos mínimos, modelagem matemática de consumo energético, e governança ESG para garantir a sustentabilidade e sobrevivência da base.
+Curso: Ciência da Computação
 
-## Diagrama de Arquitetura
+Instituição: FIAP
 
-```mermaid
-flowchart LR
-    subgraph SIGIC[" SIGIC"]
-        CF["codigo_fonte.py\nMenu Principal"] --> MOD["modulos.py\nDados dos Módulos"]
-        CF --> GRF["grafo.py\nEstrutura do Grafo"]
-        CF --> ALG["algoritmos.py\nBFS / DFS / Dijkstra"]
-        CF --> MAT["modelagem.py\nModelagem Matemática"]
-        CF --> ESG["sustentabilidade.py\nAnálise ESG"]
-        CF --> UTL["utils.py\nUtilitários"]
-    end
+---
 
-    style SIGIC fill:#1a1a2e,stroke:#e94560,color:#fff
-    style CF fill:#e94560,stroke:#c0392b,color:#fff
-    style MOD fill:#0f3460,stroke:#16213e,color:#fff
-    style GRF fill:#0f3460,stroke:#16213e,color:#fff
-    style ALG fill:#0f3460,stroke:#16213e,color:#fff
-    style MAT fill:#0f3460,stroke:#16213e,color:#fff
-    style ESG fill:#0f3460,stroke:#16213e,color:#fff
-    style UTL fill:#0f3460,stroke:#16213e,color:#fff
+# Sobre o Projeto
+
+O SIGIC (Sistema Inteligente de Gerenciamento da Infraestrutura da Colônia) foi desenvolvido para representar computacionalmente a infraestrutura da colônia marciana Aurora Siger.
+
+O sistema utiliza conceitos de Grafos, Estruturas de Dados, Algoritmos de Busca, Caminhos Mínimos, Modelagem Matemática e Sustentabilidade ESG para monitorar e otimizar o funcionamento dos módulos da colônia.
+
+A proposta é simular um ambiente inteligente capaz de:
+
+- Organizar os módulos da colônia;
+- Controlar o consumo energético;
+- Identificar rotas eficientes para distribuição de recursos;
+- Simular situações operacionais;
+- Avaliar riscos de falhas na infraestrutura;
+- Aplicar princípios de sustentabilidade e governança.
+
+---
+
+# Objetivos
+
+O sistema foi desenvolvido com os seguintes objetivos:
+
+- Representar a infraestrutura da colônia através de grafos;
+- Aplicar algoritmos de redes estudados em aula;
+- Demonstrar o uso de estruturas de dados em Python;
+- Modelar matematicamente fenômenos relacionados ao consumo energético;
+- Avaliar a eficiência operacional da colônia;
+- Propor estratégias sustentáveis para expansão da infraestrutura.
+
+---
+
+# Conceitos Aplicados
+
+## Grafos
+
+A infraestrutura da colônia é representada por um grafo.
+
+Cada módulo da base corresponde a um vértice.
+
+As conexões entre módulos são representadas por arestas ponderadas.
+
+Os pesos representam:
+
+- Distância;
+- Tempo de comunicação;
+- Custo energético.
+
+---
+
+## BFS (Busca em Largura)
+
+Utilizada para:
+
+- Explorar a rede por níveis;
+- Verificar conectividade;
+- Descobrir módulos acessíveis.
+
+---
+
+## DFS (Busca em Profundidade)
+
+Utilizada para:
+
+- Percorrer toda a infraestrutura;
+- Identificar componentes conectados;
+- Detectar possíveis ciclos.
+
+---
+
+## Algoritmo de Dijkstra
+
+Aplicado para:
+
+- Encontrar o caminho mínimo entre módulos;
+- Reduzir custos de distribuição;
+- Melhorar a eficiência operacional.
+
+Exemplo:
+
+Armazenamento de Energia → Centro Médico
+
+O sistema calcula automaticamente a melhor rota para envio de energia.
+
+---
+
+# Estruturas de Dados Utilizadas
+
+## Dicionários
+
+Armazenam informações dos módulos:
+
+```python
+{
+    "Centro Médico": {
+        "consumo": 150,
+        "prioridade": 5
+    }
+}
 ```
 
-## Requisitos e Instalação
+## Listas
 
-O projeto central utiliza Python puro e bibliotecas nativas (como `os` e `math`), porém, para o carregamento dinâmico de dados a partir de arquivos CSV, o projeto requer a biblioteca **Pandas**.
+Utilizadas para:
 
-Para instalar as dependências necessárias, execute:
+- Conexões dos módulos;
+- Resultados dos algoritmos;
+- Percursos BFS e DFS.
+
+## Matrizes
+
+Representam:
+
+- Matriz de adjacência;
+- Custos entre módulos.
+
+## Tuplas
+
+Utilizadas para armazenar:
+
+- Pares origem-destino;
+- Conexões imutáveis.
+
+---
+
+# Módulos da Colônia
+
+O sistema considera os seguintes módulos:
+
+- Habitação;
+- Centro de Controle;
+- Armazenamento de Energia;
+- Agricultura;
+- Laboratório Científico;
+- Comunicação;
+- Centro Médico;
+- Produção de Oxigênio.
+
+Cada módulo possui:
+
+- Consumo energético;
+- Prioridade operacional;
+- Capacidade de armazenamento;
+- Distância dos demais módulos;
+- Status operacional.
+
+---
+
+# Estrutura da Rede
+
+A rede da Aurora Siger é composta por conexões entre todos os módulos essenciais.
+
+O objetivo é garantir:
+
+- Comunicação eficiente;
+- Distribuição energética equilibrada;
+- Tolerância a falhas;
+- Continuidade operacional.
+
+---
+
+# Funcionalidades do Sistema
+
+## 1. Visualizar Rede
+
+Exibe todos os módulos da colônia e suas conexões.
+
+## 2. Consultar Módulos
+
+Mostra:
+
+- Nome;
+- Consumo energético;
+- Prioridade;
+- Status operacional.
+
+## 3. Matriz de Adjacência
+
+Apresenta a representação matricial da rede.
+
+## 4. Lista de Adjacência
+
+Exibe os vizinhos de cada módulo.
+
+## 5. BFS
+
+Executa busca em largura.
+
+## 6. DFS
+
+Executa busca em profundidade.
+
+## 7. Dijkstra
+
+Calcula o menor caminho entre módulos.
+
+## 8. Detecção de Conexões Críticas
+
+Identifica pontos vulneráveis da infraestrutura.
+
+## 9. Análise da Rede
+
+Calcula métricas como:
+
+- Grau médio;
+- Densidade;
+- Conectividade.
+
+## 10. Simulação de Emergência
+
+Executa cenários de escassez energética.
+
+## 11. Simulação de Expansão
+
+Adiciona novos módulos à colônia.
+
+---
+
+# Modelagem Matemática
+
+Foi utilizada modelagem matemática para representar o crescimento do consumo energético.
+
+Função utilizada:
+
+f(t) = C₀ · e^(kt)
+
+Onde:
+
+- C₀ = consumo inicial;
+- k = taxa de crescimento;
+- t = tempo.
+
+Essa modelagem permite prever o aumento da demanda energética da infraestrutura.
+
+---
+
+# Sustentabilidade e ESG
+
+O projeto incorpora conceitos ESG (Environmental, Social and Governance).
+
+## Ambiental
+
+- Redução de desperdícios energéticos;
+- Uso eficiente dos recursos.
+
+## Social
+
+- Priorização dos módulos essenciais;
+- Garantia da sobrevivência da tripulação.
+
+## Governança
+
+- Tomada de decisão baseada em critérios objetivos;
+- Monitoramento contínuo da infraestrutura.
+
+---
+
+# Estrutura do Repositório
+
+```
+SIGIC/
+│
+├── main.py
+├── modulos.py
+├── grafo.py
+├── algoritmos.py
+├── modelagem.py
+├── sustentabilidade.py
+│
+├── data/
+│   ├── modulos.csv
+│   └── conexoes.csv
+│
+├── imagens/
+│   └── arquitetura.png
+│
+└── README.md
+```
+
+---
+
+# Requisitos
+
+Python 3.10 ou superior
+
+Bibliotecas:
 
 ```bash
-# Clone o repositório
-git clone https://github.com/luizduarte/fase4_grupo9.git
-
-# Acesse o diretório
-cd fase4_grupo9
-
-# Crie um ambiente virtual (opcional, mas recomendado)
-python3 -m venv venv
-source venv/bin/activate  # ou venv\Scripts\activate no Windows
-
-# Instale o pandas
 pip install pandas
-
-# Execute o sistema
-python3 main.py
 ```
 
-## Estrutura de Dados (Carregamento via CSV)
+---
 
-As informações dos módulos e suas conexões na colônia são carregadas dinamicamente através de arquivos CSV localizados na pasta `data/`:
-- **`modulos.csv`**: Define as propriedades dos módulos, como id, nome, consumo energético, armazenamento, entre outros.
-- **`conexoes.csv`**: Estabelece os enlaces (arestas do grafo) entre cada módulo indicando a distância em metros.
+# Como Executar
 
-Essa abordagem com `pandas` substitui os dados "hardcoded", garantindo maior flexibilidade e facilitando a simulação de novos cenários sem alterar o código principal.
+Clone o repositório:
 
-## Funcionalidades Principais
+```bash
+git clone https://github.com/SEU-USUARIO/SIGIC.git
+```
 
-O menu interativo apresenta as seguintes funcionalidades:
+Entre na pasta:
 
-1. **Visualizar rede da colônia**: Exibe o diagrama simplificado das conexões entre módulos.
-2. **Consultar módulos**: Lista dados, prioridades e consumo de cada setor.
-3. **Exibir matriz de adjacência**: Mostra a representação tabular das conexões.
-4. **Exibir lista de adjacência**: Mostra os vizinhos diretos de cada módulo.
-5. **Busca em Largura (BFS)**: Explora a rede por níveis de profundidade, verificando a conectividade.
-6. **Busca em Profundidade (DFS)**: Percorre a rede a fundo, identificando eventuais ciclos.
-7. **Caminho Mínimo (Dijkstra)**: Calcula a rota mais eficiente para transferência de recursos.
-8. **Detectar Conexões Críticas**: Encontra "pontos de articulação" que, se falharem, isolam partes da base.
-9. **Analisar Eficiência da Rede**: Calcula métricas como densidade, diâmetro e grau médio.
-10. **Modelagem Matemática (Consumo)**: Modela o crescimento exponencial do consumo via derivadas numéricas.
-11. **Modelagem Matemática (Perda)**: Analisa a perda de energia em conexões via gradiente descendente.
-12. **Simulação de Emergência**: Aplica regras ESG para manter a base viva sob escassez.
-13. **Relatório ESG Completo**: Avalia uso sustentável, governança tecnológica e otimização.
-14. **Simular Expansão**: Adiciona um módulo e mensura o impacto no consumo e nas conexões.
+```bash
+cd SIGIC
+```
+
+Execute:
+
+```bash
+python main.py
+```
+
+---
+
+# Exemplo de Uso
+
+Entrada:
+
+```text
+Escolha um módulo:
+Centro Médico
+```
+
+Saída:
+
+```text
+Melhor rota encontrada:
+Armazenamento de Energia
+→ Centro de Controle
+→ Centro Médico
+
+Distância total: 45 metros
+```
+
+---
+
+# Resultados Obtidos
+
+O sistema demonstrou ser capaz de:
+
+- Representar a infraestrutura da colônia;
+- Aplicar algoritmos de redes;
+- Simular cenários operacionais;
+- Identificar rotas eficientes;
+- Apoiar decisões relacionadas ao gerenciamento energético.
+
+---
+
+# Conclusão
+
+O SIGIC permitiu aplicar de forma prática os conceitos estudados durante a fase, integrando Grafos, Estruturas de Dados, Algoritmos de Redes, Modelagem Matemática e Sustentabilidade.
+
+A solução proposta demonstra como técnicas computacionais podem auxiliar na gestão inteligente de infraestruturas complexas, contribuindo para a eficiência operacional e para a sustentabilidade da colônia Aurora Siger.
+
+---
+
+# Referências
+
+- Material didático FIAP.
+- Algoritmo de Dijkstra.
+- Conceitos de BFS e DFS.
+- Documentação Python.
+- Conceitos ESG.
