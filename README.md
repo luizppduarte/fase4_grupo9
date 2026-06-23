@@ -378,3 +378,9 @@ A solução proposta demonstra como técnicas computacionais podem auxiliar na g
 - Conceitos de BFS e DFS.
 - Documentação Python.
 - Conceitos ESG.
+
+# Vídeo no Youtube
+
+```text
+https://www.youtube.com/watch?v=m4pjmmjUF5I
+```
